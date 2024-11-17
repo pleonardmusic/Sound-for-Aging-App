@@ -32,8 +32,10 @@ Numerous studies have shown the potential benefits of gamma wave stimulation for
 **
 We welcome contributions to the project. Please feel free to fork the repository, make changes, and submit a pull request.
 
-License:
-[Specify the license for your project, e.g., MIT, GPL, Apache 2.0]
+**License:
+**
+MIT
 
-Contact:
-[Your contact information, such as email address or website]
+**Contact:
+**
+https://peteleonard.org/sounds-for-aging/
