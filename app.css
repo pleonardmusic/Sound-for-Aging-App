@@ -1,0 +1,113 @@
+/*
+Dementia Audio App Stylesheet
+Author: Peter Leonard
+Date: November 17, 2024
+Description: Styles for the Dementia Audio App.
+*/
+
+body {
+    min-height: 100vh;
+    background-color: #000;
+    font-family: 'Roboto',sans-serif;
+    background: linear-gradient(180deg,#62186B 0%,#DB302A 100%) no-repeat;
+    color: white;
+}
+
+.container {
+margin: 0 auto; /* Center the inner container within the outer container */        
+  max-width: 800px;
+  padding: 20px;
+  padding-top: 40px;
+  text-align: left;
+background-image: url('https://peteleonard.org/wp-content/uploads/2024/10/IPAD-BACKGROUND.png');/* FROM https://mockuphone.com/model/ipad-mini/ */
+background-size: contain; /* or 'contain', depending on your needs */
+background-position: center; /* to center the image */
+background-repeat: no-repeat; /* to prevent tiling */      
+}
+
+.inner-container {
+  margin: 0 auto; /* Center the inner container within the outer container */    
+  min-width: 50%;
+  max-width: 400px;
+  padding: 20px;
+  padding-top: 40px;
+  text-align: left;      
+  color: white;
+}    
+
+canvas {
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+  background-color: #ffc0cb;
+  /* Light pink background */
+}
+
+.output-box {
+  display: inline-block;
+  min-width: 40px;
+}
+
+/* Hidden by default */
+#pulseAmplitudeContainer {
+  display: none;
+}
+
+.my-slider {
+appearance: none; /* removes browser-specific styling */
+width: 50%; /* width of slider */
+height: 25px; /* height of slider */
+background: #ffc0cb ; /* pink background */
+outline: none; /* remove outline */
+border-radius: 12px; /* round corners */
+}
+
+.slider-output {
+  font-size: 1.2em; /* Adjusts the font size */
+}
+
+/* Style for the select element */
+#soundType {
+  background-color: #ffc0cb;
+  font-size: 1.1em; /* Adjusts the font size */
+  padding: 3px; /* Adds padding for larger area */
+  border-radius: 5px; /* Adds rounded corners */
+  border: 1px solid #ccc; /* Adds a border */
+  color: #62186B;
+}    
+
+#frequency {
+  background-color: #ffc0cb;
+  font-size: 1.1em; /* Adjusts the font size */
+  padding: 3px; /* Adds padding for larger area */
+  border-radius: 5px; /* Adds rounded corners */
+  border: 1px solid #ccc; /* Adds a border */
+  color: #62186B;
+}        
+
+/* Style for the buttons */
+button {
+  background-color: #ffc0cb; /* Hot pink background */
+  color: white; /* Text color */
+  font-size: 1.2em; /* Font size */
+  padding: 3px 20px; /* Padding for larger area */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 5px; /* Margin between buttons */
+  transition: background-color 0.3s; /* Smooth transition */
+  color: #62186B;      
+}
+
+button:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}    
+
+@media (max-width: 550px) {
+    .container {
+        background-image: none; /* Remove the background image */
+        border: 2px solid #000; /* Set the border color and thickness */
+        border-radius: 15px;    /* Adjust the radius for rounded corners */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    
+    }
+}

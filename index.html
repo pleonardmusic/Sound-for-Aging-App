@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dementia Audio App</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="app.css">
+</head>
+
+
+<body>
+   <div class="container">
+  	<div class="inner-container">
+    <h1 style="text-align: center;"><i>Sound for Aging</i></h1>
+    <h4 style="text-align: center; padding-bottom: 20px;">by Sound Applications</h4>
+    <label for="soundType" style="width: 105px;">Audio Source:</label>
+    <select id="soundType" style="background-color: #ffc0cb;">
+      <option value="sineWave">Sine Wave</option>
+      <option value="whiteNoise">White Noise</option>
+      <option value="audioFile">Audio File</option>
+    </select>
+    <br>
+    <label for="frequency" style="width: 105px;">Frequency:</label>
+    <input type="number" id="frequency" value="10000" style="width: 7em;">
+    <br>
+    <label for="playbackControl">Playback Control:</label>
+    <button id="playButton" onclick="startAudio()">Play</button>
+    <button id="stopButton" onclick="stopAudio()">Stop</button>  
+    <div id="muteAlert" style="display:none; position:fixed; top:40%; left:50%; transform:translateX(-50%); padding:20px; background-color:red; color:white; font-size:20px; border-radius:5px;">
+  Unmute Phone
+</div>  
+    <br>
+    <label for="gateDuration">Pulse Duration:</label><br>
+    <input type="range" class="my-slider" id="gateDuration" min="20" max="500" step="1" value="44">
+    
+    <span class="output-box slider-output" id="gateDurationValue" style="display:none;">44 samples</span>
+    <span class="output-box slider-output" id="gateDurationMsValue">(1.0 ms)</span>
+    
+    <!-- Wrapped Pulse Amplitude Range in a container to control visibility -->
+    <div id="pulseAmplitudeContainer">
+      <label for="gateMinimum">Amplitude Range:</label><br>
+      <input type="range" class="my-slider slider-output" id="gateMinimum" min="0.0" max="1.0" step="0.01" value="0">
+      <span id="gateMinimumValue" class="slider-output" style="min-width: 40px">0.0</span><span class="slider-output"> - 1.0</span>
+    </div>
+	<div class="additional-noise-controls">
+  	<label for="additionalNoiseVolume">White Noise Masking Volume:</label>
+  	<input type="range" class="my-slider" id="additionalNoiseVolume" min="0" max="0.5" step="0.01" value="0.0">
+  	<span class="slider-output" id="additionalNoiseVolumeValue">0.5</span>
+	</div>      
+    <input type="file" id="audioFile" accept=".mp3, .wav, audio/*" style="display: none;">
+    <br>
+    <canvas id="visualizer"></canvas>      
+
+	</div><!-- END inner-container-->
+</div><!-- END container-->
+
+<script src="script.js"></script>
+</body>
+</html>
